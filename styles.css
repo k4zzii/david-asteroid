@@ -1,7 +1,3 @@
-/* canvas {
-  border: 1px solid black
-} */
-
 @font-face {
   font-family: "Pixellari";
   src: url("fonts/Pixellari.ttf");
@@ -64,3 +60,6 @@ body {
   justify-content: center;
 }
 
+#div {
+  display:none;
+}
