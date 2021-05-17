@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>David Asteroid</title>
   <link href="styles.css" rel="stylesheet">
 </head>
-<body>
+
+<body onload="draw();">
+
   <canvas id="asteroid">
-    <img id="asteroidSVG" src="asteroid.svg"/>
+    <img id="asteroidSVG" src="asteroid.svg" viewBox="0 0 720 400" />
   </canvas>
-  <script src="scripts.js"></script>
+
 </body>
+<script src="scripts.js"></script>
+
 </html>
