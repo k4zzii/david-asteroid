@@ -4,6 +4,8 @@ function draw() {
   console.log('draw')
   if (canvas.getContext) {
     var ctx = canvas.getContext('2d');
+    ctx.canvas.height = window.innerHeight;
+    ctx.canvas.width = window.innerWidth;
     console.log("ok")
 
     ctx.fillStyle = 'rgb(200, 0, 0'
