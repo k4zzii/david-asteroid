@@ -4,18 +4,17 @@ var rocket = new Image();
 rocket.src = "rocket.svg";
 var spaceBackground = new Image();
 spaceBackground.src = "espace.png"
-var ctx = canvas.getContext('2d', {alpha:false});
+var ctx = canvas.getContext('2d');
 ctx.canvas.height = window.innerHeight;
 ctx.canvas.width = window.innerWidth
-var posX = 200
-var posY = 300
-var rocketX = 400
+var posX = window.innerWidth
+var posY = window.innerHeight
+var rocketX = 800
 var rocketY = 0
 
 function draw() {
     console.log('draw')
     if (canvas.getContext) {
-        ctx.drawImage(spaceBackground, 0, 0)
 
 
     } else {
@@ -42,23 +41,11 @@ document.addEventListener('keydown', (e) => {
 
 
 
-
-function drawAst() {
-    ctx.clearRect(0, 0, 500, 500)
-    ctx.beginPath()
-    ctx.fillRect(posX, posY, 100, 100);
-    ctx.fillStyle = 'rgb(200, 0, 0)'
-    ctx.fill();
-    ctx.closePath();
-
-}
-
-
-
 function drawRock() {
     ctx.clearRect(0, 0, 500, 500)
-    ctx.drawImage(rocket, rocketX, rocketY, 80, 80);
-    ctx.drawImage(image, posX / 2, posY / 2, 80, 80);
+    ctx.drawImage(spaceBackground, 0, 0)
+    ctx.drawImage(rocket, rocketX, rocketY, 120, 120);
+    ctx.drawImage(image, posX / 2, posY / 2, 110, 110);
     rocketX -= dx
 
 }
@@ -67,7 +54,7 @@ function gravity() {
     posY += 20
 }
 
-var dx = 2
+var dx = 15
 
 
 function callGame() {
